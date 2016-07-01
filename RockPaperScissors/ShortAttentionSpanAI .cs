@@ -16,17 +16,27 @@ namespace RockPaperScissors
         /// For example, if it sees Rock, it picks Paper as its next move (because Paper beats Rock).
         /// </summary>
         /// <returns></returns>
-
-
+        
+        int savedPlay;        
 
         public int NextMove()
         {
-            throw new NotImplementedException();
+
+                if (savedPlay == 0)
+                {
+                    return 1;
+                }
+                if (savedPlay == 1)
+                {
+                    return 2;
+                }
+                else return 0;
+
         }
 
         public void SaveResult(int myMove, int otherMove)
-        {
-            throw new NotImplementedException();
+        {           
+            savedPlay = otherMove;
         }
     }
 }
